@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive NavBar</title>
+
+    <!------------ GOOGLE FONTS ------------>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Cabin|Lato|Fjalla+One|Montserrat|Roboto&display=swap"
+        rel="stylesheet">
+
+    <!------------ FONT AWESOME ------------>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <!------------ CUSTOM STYLE SHEET ------------>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="logo">WEB DEV</a>
+
+        <input type="checkbox" id="box">
+        <label for="box">
+            <span>MENU <i class="fas fa-bars"></i></span>
+        </label>
+
+        <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Dropdown &nbsp;&nbsp;<span><i class="fa fa-angle-down"></i></span> </a>
+                <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 2</a></li>
+                    <li>
+                        <a href="#">Dropdown &nbsp;&nbsp;<span><i class="fa fa-angle-down drop-icon"></i></span> </a>
+                        <ul>
+                            <li><a href="#">Sub Menu 1</a></li>
+                            <li><a href="#">Sub Menu 2</a></li>
+                            <li>
+                                <a href="#">Dropdown&nbsp;&nbsp;<span><i class="fa fa-angle-down drop-icon"></i></span> </a>
+                                <ul>
+                                    <li><a href="#">Sub Menu 1</a></li>
+                                    <li><a href="#">Sub Menu 2</a></li>
+                                    <li><a href="#">Sub Menu 3</a></li>
+                                    <li><a href="#">Sub Menu 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sub Menu 4</a></li>
+                            <li><a href="#">Sub Menu 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sub Menu 4</a></li>
+                    <li><a href="#">Sub Menu 5</a></li>
+                </ul>
+
+            </li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+    </nav>
+    <div class="timeline">
+        <div class="container left-container">
+            <img src="img/tesla.png" alt="">
+            <div class="text-box">
+                <h2> header</h2>
+                <h3>Header2</h3>
+                <small>2024-2025</small>
+                <p> ipsum dolor sit ea error dolore asperiores quas voluptates a?</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="img/google.png" alt="">
+            <div class="text-box">
+                <h2> header</h2>
+                <small>2024-2025</small>
+                <p> ipsum dolor sit ea error dolore asperiores quas voluptates a?</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <img src="img/tesla.png" alt="">
+            <div class="text-box">
+                <h2> header</h2>
+                <small>2024-2025</small>
+                <p> ipsum dolor sit ea error dolore asperiores quas voluptates a?</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="img/google.png" alt="">
+            <div class="text-box">
+                <h2> header</h2>
+                <small>2024-2025</small>
+                <p> ipsum dolor sit ea error dolore asperiores quas voluptates a?</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <img src="img/tesla.png" alt="">
+            <div class="text-box">
+                <h2> header</h2>
+                <small>2024-2025</small>
+                <p> ipsum dolor sit ea error dolore asperiores quas voluptates a?</p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="img/google.png" alt="">
+            <div class="text-box">
+                <h2> header</h2>
+                <small>2024-2025</small>
+                <p> ipsum dolor sit ea error dolore asperiores quas voluptates a?</p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let dropdown = document.querySelectorAll("nav ul li a");
+
+        dropdown.forEach((element) => {
+            element.addEventListener("click" , (event)=> {
+                event.stopPropagation();
+                element.nextElementSibling.classList.toggle("show");
+            })
+        })
+    </script>
+</body>
+
+</html>
